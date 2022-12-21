@@ -1,8 +1,10 @@
 /*
-colors:
+colors
+
 background: #FAFAFA
 div: #FFFFFF
-font: mukita
+text-input: #9F9C9C
+font: Work Sans
 */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
@@ -15,16 +17,25 @@ font: mukita
 }
 body{
     background-color: #FAFAFA;
+    width: 100%;
+    min-height: 100vh;
 }
-main{
+#instagram_wrapper{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 50px;
 }
 
-#imagem_celular{
+#image_phone{
     margin-right: 50px;
+}
+video{
+    width: 280px;
+    height: 480px;
+    position: absolute;
+    top: 136px;
+    z-index: -1;
 }
 #login{
     width: 348px;
@@ -63,7 +74,7 @@ main{
     margin-top: 12px;
     cursor: pointer;
 }
-#line_ou{
+#login > p{
     padding: 10px;
     background-color: #FFFFFF;
     color: #a19f9a;
@@ -72,8 +83,8 @@ main{
     position: absolute;
     top: 335px;
 }
-#login2{
-    width: 348px;
+#forgot_password{
+    width: 300px;
     height: 90px;
     display: flex;
     flex-direction: column;
@@ -81,27 +92,27 @@ main{
     margin-top: 25px;
     border-top: #E7E7E7 solid 1px;
 }
-#container_facebook{
+#forgot_password > a{
+    font-size: 12px;
+    color: #385185;
+    margin-top: 20px;
+}
+#facebook_wrapper{
     margin-top: 30px;
     display: flex;
     align-items: center;
 }
-#icone_facebook{
+#facebook_wrapper > img{
     width: 18px;
     height: 18px;
 }
-#link_facebook{
+#facebook_wrapper > a{
     font-size: 15px;
     font-weight: 500;
     color: #385185;
     margin-left: 5px;
 }
-#esqueceu_senha{
-    font-size: 12px;
-    color: #385185;
-    margin-top: 20px;
-}
-#cadastro{
+#sign_up{
     width: 348px;
     height: 63px;
     background-color: #FFFFFF;
@@ -112,11 +123,12 @@ main{
     margin-top: 12px;
     font-size: 14px;
 }
-#link_cadastro{
+#sign_up > a{
+    margin-left: 5px;
     color: #45c1f1;
     font-weight: 600;
 }
-#app{
+#get_app{
     width: 348px;
     height: 100px;
     margin-top: 25px;
@@ -125,7 +137,7 @@ main{
     align-items: center;
     flex-direction: column;
 }
-#downloads{
+#download_options{
     display: flex;
     flex-direction: row;
 }
@@ -136,46 +148,87 @@ main{
     margin: 10px 10px 0 0;
     border-radius: 3px;
 }
-.app_description{
+.app_download > p{
     font-size: 12px;
     color: #FFFFFF;
     padding-left: 5px;
     padding-bottom: 2px;
 }
-.container_description{
+.description_wrapper{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }
-.app_icons{
+.description_wrapper > img{
     padding-left: 5px;
 }
-
+.description_wrapper > p{
+    font-size: 12px;
+    color: #FFFFFF;
+    padding-left: 5px;
+    padding-bottom: 2px;
+}
+summary{
+    list-style: none;
+}
+summary > i{
+    color: #9F9C9C;
+    margin: 0;
+    padding: 0;
+}
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 65px;
 }
-.links{
+p > a{
     margin-right: 10px;
     text-decoration: none;
     color: #9F9C9C;
     font-size: 12px;
     font-weight: 500;
 }
-#grupo_footer{
+#footer_group{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
-
-details{
+#footer_group > p{
+    text-decoration: none;
+    color: #9F9C9C;
+    font-size: 12px;
+    font-weight: 500;
+}
+ul{
+    height: 80px;
     overflow-y: scroll;
 }
 li{
     list-style-type: none;
+}
+
+@media (max-width:650px) {
+    #image_phone{
+        display: none;
+    }
+    body {
+        background-color: #FFFFFF;
+    }
+    #login{
+        border: none;
+    }
+    #sign_up{
+        border: none;
+    }
+    video{
+        display: none;
+    }
+    figure{
+        display: none;
+    }
 }
